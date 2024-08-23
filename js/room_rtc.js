@@ -20,7 +20,7 @@ if(!roomId){
 
 let displayName = sessionStorage.getItem('display_name')
 if(!displayName){
-     window.location = 'lobby.html'
+     window.location = 'index.html'
 }
 
 let localTracks = []
@@ -72,7 +72,7 @@ let leaveRoom =  async (event) => {
             await rtmClient.logout();
             console.log('Logged out from RTM');
         }
-        window.location.href = 'lobby.html';
+        window.location.href = 'index.html';
     } catch (error) {
         console.error('Error leaving the room:', error);
     }
