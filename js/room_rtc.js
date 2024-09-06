@@ -31,7 +31,7 @@ let sharingScreen = false;
 
 let joinRoomInit = async () => {
     rtmClient = await AgoraRTM.createInstance(APP_ID)
-    // rtmClient = new AgoraRTM.RTM(APP_ID);
+   
     await rtmClient.login({uid,token})
    
     await rtmClient.addOrUpdateLocalUserAttributes({'name':displayName})
@@ -169,10 +169,8 @@ let handleUserLeft = async (user) => {
 
 let toggleCamera = async (e) => {
     let button = e.currentTarget
-
     if(localTracks[1].muted){
         await localTracks[1].setMuted(false)
-        button.classList.add('active')
     }else{
         await localTracks[1].setMuted(true)
         button.classList.remove('active')

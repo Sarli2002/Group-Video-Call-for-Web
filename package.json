@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "agora-rtm-sdk": "^2.1.10",
     "dotenv": "^16.4.5"
   }
 }
